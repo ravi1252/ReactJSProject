@@ -15,6 +15,9 @@ class LeftMenu extends React.Component {
                 <button onClick={this.props.handleClick.bind(this, 'LINK1')}>
                     {this.props.LINK1}
                 </button>
+                <button onClick={this.props.handleClick.bind(this, 'LINK2')}>
+                    {this.props.LINK2}
+                </button>
             </div>
         )
     }

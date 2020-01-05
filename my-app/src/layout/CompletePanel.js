@@ -1,6 +1,7 @@
 import React from 'react';
 import LeftMenu from './LeftMenu';
 import RightContainer from './RightContainer';
+import Student from './Student';
 
 class CompletePanel extends React.Component {
 
@@ -24,13 +25,14 @@ class CompletePanel extends React.Component {
 
     render(){
         if (this.state.clickReceived == 'LINK1') {
-             this.renderComp =  <RightContainer/>;
+            this.renderComp =  <RightContainer/>;
+        } else if (this.state.clickReceived == 'LINK2') {
+            this.renderComp =  <Student/>;
         }
         return (
             <div>
-                <LeftMenu LINK1="link 1" handleClick={this.handleClick}/>
+                <LeftMenu LINK1="link 1" LINK2="link 2" handleClick={this.handleClick}/>
                 {this.renderComp}
-                
             </div>
         )
     }
